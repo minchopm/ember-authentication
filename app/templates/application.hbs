@@ -1,0 +1,9 @@
+<h2 id="title">Welcome to Ember.js and JWT authentication</h2>
+
+{{#if session.isAuthenticated}}
+  <p><a {{ action 'invalidateSession' }}>Logout</a></p>
+{{else}}
+  <p><a {{ action 'sessionRequiresAuthentication' }}>Login</a></p>
+{{/if}}
+
+{{outlet}}
